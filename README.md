@@ -7,7 +7,6 @@
 ## 🧠 Features
 
 - 🔍 **Smart Matching Algorithm** based on languages, frameworks, experience, and goals
-- 🧑‍💻 **Developer Profiles** with GitHub and LinkedIn integration
 - 🧑‍🤝‍🧑 **Match Requests** – explore style
 - 📚 **Tech Stack** to find exact or complementary skillsets
 - 🌙 **Dark Mode** for code-friendly browsing
@@ -98,3 +97,67 @@ Use the following credentials to log in as an admin:
 EMAIL = "admin@gmail.com"
 PASSWORD = "Admin@12"
 ```
+## 📡 StackMatch API Endpoints
+
+### 🔐 Auth Routes
+
+| Method | Endpoint       | Description            |
+|--------|----------------|------------------------|
+| POST   | /signup        | Register a new user    |
+| POST   | /login         | Log in existing user   |
+| POST   | /logout        | Log out the session    |
+
+---
+
+### 👤 Profile Routes
+
+| Method | Endpoint        | Description         |
+|--------|-----------------|---------------------|
+| GET    | /profile/view   | View user profile   |
+| PATCH  | /profile/edit   | Edit user profile   |
+
+---
+
+### 🧑‍🤝‍🧑 User Routes
+
+| Method | Endpoint           | Description               |
+|--------|--------------------|---------------------------|
+| GET    | /feed              | Get developer feed        |
+| GET    | /user/requests     | Get connection requests   |
+| GET    | /user/connections  | Get existing connections  |
+
+---
+
+### 🔗 Connection Routes
+
+| Method | Endpoint                                 | Description                        |
+|--------|------------------------------------------|------------------------------------|
+| POST   | /request/send/interested/:toUserId       | Send "interested" request          |
+| POST   | /request/send/ignored/:toUserId          | Send "ignored" request             |
+| POST   | /request/review/accepted/:requestId      | Accept a connection request        |
+| POST   | /request/review/rejected/:requestId      | Reject a connection request        |
+
+---
+
+## 📈 Future Improvements
+- Enhanced Matchmaking Algorithm
+- In-App Messaging
+- GitHub & Portfolio Integration
+- Project Collaboration Boards
+- Dark/Light Theme Toggle
+
+---
+
+## 🤝 Contributing
+- Contributions are welcome!
+
+```
+# Fork the repo
+# Create your feature branch (git checkout -b feature/YourFeature)
+# Commit your changes (git commit -m 'Add YourFeature')
+# Push to the branch (git push origin feature/YourFeature)
+# Open a Pull Request
+```
+
+## 🧑‍💻 Author
+- [Ayush Kumar](https://github.com/Ayush170803)
