@@ -62,3 +62,39 @@ StackMatch/
 ├── .gitattributes
 └── README.md
 ```
+## 💡 How to Run the Project
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Ayush170803/StackMatch.git
+```
+
+### 2. Backend Setup
+
+```bash
+cd Backend
+npm install
+nodemon src/app.js
+```
+
+> Backend will run on `http://localhost:3000`
+
+### 3. Frontend Setup
+
+```bash
+cd Frontend
+npm install
+npm run dev
+```
+
+> Frontend will run on `http://localhost:5173`
+
+## 🧪 Admin Test Credentials
+
+Use the following credentials to log in as an admin:
+
+```
+EMAIL = "admin@gmail.com"
+PASSWORD = "Admin@12"
+```
