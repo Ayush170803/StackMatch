@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import {  useDispatch, useSelector } from 'react-redux';
 import { addConnections } from '../utils/connectionSlice';
+import { useNavigate } from 'react-router-dom';
 
 const Connections = () => {
+  const navigate = useNavigate();
   const [error,setError] = useState("");
   const dispatch = useDispatch();
   const allConnections = useSelector((store)=> store.Connections)
@@ -39,6 +41,7 @@ const Connections = () => {
     <div className="connections-container">
     {allConnections.map((connection) =>
     {
+       if (!connection) return null;
       const {_id,firstName,lastName,photoUrl,gender,age,about,skills} = connection;
       return(
         <div key={_id} className="connection-card">
@@ -55,6 +58,7 @@ const Connections = () => {
             </span>
           ))}
         </div>
+        <button onClick={() => navigate(`/chat/${_id}`)}>Chat</button>
           </div>
         </div>
       );

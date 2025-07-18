@@ -15,6 +15,7 @@ const Body = () => {
     try
     {
     const res = await axios.get("http://localhost:3000/profile/view",{withCredentials:true});
+    console.log(res);
     dispatch(addUser(res.data));
     }
     catch(er)

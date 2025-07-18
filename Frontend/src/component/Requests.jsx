@@ -63,6 +63,7 @@ const Requests = () => {
   return (
     <div className="request-container">
     {allRequests.map((request) => {
+    
        const { requestId, fromUser } = request;
        const { _id, firstName, lastName, photoUrl, gender, age, about, skills } = fromUser;
       return (

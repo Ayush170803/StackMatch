@@ -2,6 +2,7 @@ const express = require("express");
 const {validateEditData} = require('../utils/validation');
 const profileRouter = express.Router();
 const {userauth} = require('../Middlewares/auth');
+const User = require('../Models/user');
 
 profileRouter.get('/profile/view', userauth, async (req,res)=>
     {
@@ -40,4 +41,23 @@ catch(er)
   res.status(400).send("error:"+ er.messsage);
 }
 })
+
+profileRouter.get('/profile/view/:friendId', userauth, async (req, res) => {
+  try {
+    const {friendId}=req.params;
+
+    const friend=await User.findById(friendId).select('firstName lastName photoUrl gender age about skills');
+    if(!friend)
+    {
+      return res.status(404).json({message:'user not found'});
+    }
+    res.json(friend);
+  }
+  catch(err)
+  {
+    console.error(err);
+    res.status(500).json({ message:'Failed to fetch friend profile' });
+  }
+});
+
 module.exports = profileRouter;

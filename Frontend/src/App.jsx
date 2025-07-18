@@ -10,6 +10,8 @@ import Feed from "./component/Feed";
 import Requests from "./component/Requests";
 import Connections from "./component/Connections";
 import Error from "./component/Error";
+import Chat from "./component/Chat";
+
 
 function App() {
   return (
@@ -19,11 +21,12 @@ function App() {
         <Routes>
            <Route path='/' element={<Body/>}>
 
-             <Route path='/' element={<Feed/>}></Route>
+              <Route path='/' element={<Feed/>}></Route>
               <Route path='/login' element={<Login/>}></Route>
               <Route path='/profile' element={<Profile/>}></Route>
               <Route path='/requests' element={<Requests/>}></Route>
               <Route path='/connections' element={<Connections/>}></Route>
+              <Route path="/chat/:friendId" element={<Chat />} />
               <Route path="*" element={<Error />} ></Route>
 
            </Route>

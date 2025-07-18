@@ -880,3 +880,29 @@ color:whitesmoke;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(0, 201, 255, 0.5);
 }
+
+.connection-info button {
+  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+  color: #ffffff;
+  padding: 10px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 135, 0.2);
+  outline: none;
+  margin-top: 12px;
+}
+
+.connection-info button:hover {
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(0, 255, 135, 0.4), 0 0 20px rgba(0, 255, 135, 0.1);
+}
+
+.connection-info button:active {
+  transform: scale(0.97);
+  box-shadow: 0 0 6px rgba(0, 255, 135, 0.25);
+}

@@ -1,4 +1,4 @@
-// create a user schema and mongoose model
+
 const mongoose = require("mongoose");
 
 const validator = require("validator");
@@ -72,5 +72,6 @@ userSchema.methods.validatepassword = async function(passwordInputByUser)
   const ispasswordvalid=await bcrypt.compare(passwordInputByUser,passwordHash);
   return ispasswordvalid;
 }
+
 module.exports = mongoose.model("User",userSchema); // User naam ka model on top of userSchema
 

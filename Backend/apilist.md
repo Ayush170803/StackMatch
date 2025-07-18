@@ -8,11 +8,10 @@
 # ProfileRouter
 - GET /profile/view
 - PATCH /profile/edit
-- PATCH /profile/password
 
 # UserRouter
-- GET user/feed   // sends all profiles
-- GET user/requests/received
+- GET /feed   
+- GET user/requests
 - GET /user/connections
 
 
